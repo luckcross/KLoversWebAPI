@@ -1,0 +1,11 @@
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\KLoversWebService\KLoversWebService\bin\Debug\netcoreapp2.0\KLoversWebService.deps.json
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\KLoversWebService\KLoversWebService\bin\Debug\netcoreapp2.0\KLoversWebService.runtimeconfig.json
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\KLoversWebService\KLoversWebService\bin\Debug\netcoreapp2.0\KLoversWebService.runtimeconfig.dev.json
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\KLoversWebService\KLoversWebService\bin\Debug\netcoreapp2.0\KLoversWebService.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\KLoversWebService\KLoversWebService\bin\Debug\netcoreapp2.0\KLoversWebService.pdb
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\KLoversWebService\KLoversWebService\obj\Debug\netcoreapp2.0\KLoversWebService.csprojResolveAssemblyReference.cache
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\KLoversWebService\KLoversWebService\obj\Debug\netcoreapp2.0\KLoversWebService.csproj.CoreCompileInputs.cache
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\KLoversWebService\KLoversWebService\obj\Debug\netcoreapp2.0\KLoversWebService.AssemblyInfoInputs.cache
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\KLoversWebService\KLoversWebService\obj\Debug\netcoreapp2.0\KLoversWebService.AssemblyInfo.cs
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\KLoversWebService\KLoversWebService\obj\Debug\netcoreapp2.0\KLoversWebService.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\KLoversWebService\KLoversWebService\obj\Debug\netcoreapp2.0\KLoversWebService.pdb
