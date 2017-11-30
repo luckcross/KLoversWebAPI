@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace KLoversWebService.Models
+namespace KLoversWebService.Models.Database
 {
-    [Table("matc_match")]
+    [Table("matc_match", Schema = "klovers")]
     public partial class Match
     {
         [Column("matc_id")]

@@ -39,7 +39,6 @@ namespace KLoversWebService
                 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
             });*/
 
-
             services.AddEntityFrameworkSqlServer();
             services.AddDbContext<KLoversDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }
@@ -53,7 +52,7 @@ namespace KLoversWebService
             }
 
             app.UseMvc();
-
+            
             app.Run(async (context) =>
             {
                 await context.Response.WriteAsync("MVC didnt't find anything!");

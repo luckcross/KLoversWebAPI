@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace KLoversWebService.Models
+namespace KLoversWebService.Models.Database
 {
-    [Table("mess_message")]
+    [Table("mess_message", Schema = "klovers")]
     public partial class Message
     {
         [Column("mess_id")]

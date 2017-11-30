@@ -5,9 +5,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace KLoversWebService.Models
+namespace KLoversWebService.Models.Database
 {
-    [Table("ause_app_user")]
+    [Table("ause_app_user", Schema = "klovers")]
     public class AppUser
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

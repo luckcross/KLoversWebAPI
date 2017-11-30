@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace KLoversWebService.Models
+namespace KLoversWebService.Models.Database
 {
-    [Table("pset_perfil_settings")]
+    [Table("pset_perfil_settings", Schema = "klovers")]
     public partial class PerfilSettings
     {
         [Column("pset_id")]

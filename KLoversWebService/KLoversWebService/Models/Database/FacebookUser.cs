@@ -4,9 +4,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace KLoversWebService.Models
+namespace KLoversWebService.Models.Database
 {
-    [Table("facu_facebook_user")]
+    [Table("facu_facebook_user", Schema = "klovers")]
     public class FacebookUser
     {
         [Column("facu_id")]

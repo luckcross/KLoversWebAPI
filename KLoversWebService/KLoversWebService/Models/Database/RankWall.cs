@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace KLoversWebService.Models
+namespace KLoversWebService.Models.Database
 {
-    [Table("rwal_rank_wall")]
+    [Table("rwal_rank_wall", Schema = "klovers")]
     public partial class RankWall
     {
         [Column("rwal_id")]

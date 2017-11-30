@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace KLoversWebService.Models
+namespace KLoversWebService.Models.Database
 {
-    [Table("pbia_perfil_bias")]
+    [Table("pbia_perfil_bias", Schema = "klovers")]
     public partial class PerfilBias
     {
         [Column("pbia_id")]

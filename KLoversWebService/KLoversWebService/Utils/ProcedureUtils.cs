@@ -12,10 +12,11 @@ namespace KLoversWebService.Utils
 {
     public static class ProcedureUtils
     {
-        public static int ExecuteProcedure(KLoversDBContext db, string procName, params SqlParameter[] parameters)
+        public static int ExecuteProcedure(KLoversDBContext db, string schema, string procName, params SqlParameter[] parameters)
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("EXEC ");
+            sb.Append(schema + ".");
             sb.Append(procName);
 
             SqlParameter currentParameter = null;

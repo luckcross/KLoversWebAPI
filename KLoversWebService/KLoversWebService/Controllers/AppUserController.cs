@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using System.ComponentModel.DataAnnotations;
-using KLoversWebService.Models;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Internal;
-using Microsoft.EntityFrameworkCore.Storage;
-using System.Data.SqlClient;
-using System.Data;
+﻿using KLoversWebService.Models;
+using KLoversWebService.Models.Database;
 using KLoversWebService.Utils;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -58,6 +53,30 @@ namespace KLoversWebService.Controllers
             return new ObjectResult("AppUser added sucessfully");
         }
 
+        [HttpPost]
+        [Route("RequestLogin")]
+        public IActionResult RequestLogin([FromBody]FacebookUser facu)
+        {
+            SqlParameter[] parameters = new SqlParameter[2];
+            parameters[0] = new SqlParameter("facebook", facu.Username)
+            {
+                DbType = DbType.String,
+                Size = 50,
+                Direction = ParameterDirection.Input
+            };
+            parameters[1] = new SqlParameter("ause_id_inserted", "")
+            {
+                DbType = DbType.Int32,
+                Direction = ParameterDirection.Output
+            };
+
+            var result = ProcedureUtils.ExecuteProcedure(db, "klovers", "app_proc_user_add", parameters);
+
+            int outnewid = (int)parameters[1].Value;
+
+            return new ObjectResult("AppUser added with procedure sucessfully");
+        }
+
         [HttpPut]
         [Route("AddAppUser/{facebook}")]
         public IActionResult AddAppUser(string facebook)
@@ -75,7 +94,7 @@ namespace KLoversWebService.Controllers
                 Direction = ParameterDirection.Output
             };
 
-            var result = ProcedureUtils.ExecuteProcedure(db, "dbo.app_proc_user_add", parameters);
+            var result = ProcedureUtils.ExecuteProcedure(db, "klovers", "app_proc_user_add", parameters);
 
             int outnewid = (int)parameters[1].Value;
 
